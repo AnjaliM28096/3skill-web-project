@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3Skill - Learn, Grow, Succeed</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="3skill.css">
+</head>
+
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="website logo">
+        <!-- <i class="fas fa-graduation-cap"></i> -->
+        <!-- <span>3Skill</span> -->
+      </div>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#" class="nav-btn">Sign In</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="menuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transform Your Career with In-Demand Skills</h1>
+      <p>Join thousands of students learning the most valuable skills for today's job market. Start your journey with
+        our expert-led courses.</p>
+      <a href="#" class="cta-btn">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses">
+    <div class="section-title">
+      <h2>Popular Courses</h2>
+      <p>Discover our most popular courses designed to help you advance your career</p>
+    </div>
+
+    <div class="course-filters">
+      <button class="filter-btn active">All Courses</button>
+      <button class="filter-btn">Web Development</button>
+      <button class="filter-btn">Data Science</button>
+      <button class="filter-btn">Design</button>
+      <button class="filter-btn">Business</button>
+    </div>
+
+    <div class="course-grid">
+      <!-- Course 1 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="Web Development">
+        </div>
+        <div class="course-content">
+          <span class="course-category">Web Development</span>
+          <h3 class="course-title">Complete Web Development Bootcamp</h3>
+          <div class="course-info">
+            <div class="course-meta">
+              <i class="far fa-clock"></i>
+              <span>12 Weeks</span>
+            </div>
+            <div class="course-meta">
+              <i class="fas fa-user-graduate"></i>
+              <span>4.9(100+ Students)</span>
+            </div>
+          </div>
+          <div class="course-price">Rs.499</div>
+          <a href="#" class="course-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="Data Science">
+        </div>
+        <div class="course-content">
+          <span class="course-category">Data Science</span>
+          <h3 class="course-title">Data Science & Machine Learning Mastery</h3>
+          <div class="course-info">
+            <div class="course-meta">
+              <i class="far fa-clock"></i>
+              <span>16 Weeks</span>
+            </div>
+            <div class="course-meta">
+              <i class="fas fa-user-graduate"></i>
+              <span>4.7 (980)</span>
+            </div>
+          </div>
+          <div class="course-price">Rs. 399</div>
+          <a href="#" class="course-btn">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card">
+        <div class="course-img">
+          <img
+            src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="UI/UX Design">
+        </div>
+        <div class="course-content">
+          <span class="course-category">Design</span>
+          <h3 class="course-title">Data Science Internship +Training Program</h3>
+          <div class="course-info">
+            <div class="course-meta">
+              <i class="far fa-clock"></i>
+              <span>8 Weeks</span>
+            </div>
+            <div class="course-meta">
+              <i class="fas fa-user-graduate"></i>
+              <span>4.9 (850)</span>
+            </div>
+          </div>
+          <div class="course-price">Rs. 599</div>
+          <a href="#" class="course-btn">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="section-title">
+      <h2>Why Choose 3Skill?</h2>
+      <p>We provide the best learning experience for our students</p>
+    </div>
+
+    <div class="features-container">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="feature-title">Project-Based Learning</h3>
+        <p>Gain practical experience by building real-world projects that showcase your skills to employers.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <h3 class="feature-title">Expert Instructors</h3>
+        <p>Learn from industry professionals with years of experience in their respective fields.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 class="feature-title">Community Support</h3>
+        <p>Join our active community of learners and get help when you need it from peers and mentors.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="section-title">
+      <h2>Student Success Stories</h2>
+      <p>Hear from our students who transformed their careers</p>
+    </div>
+
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <p class="testimonial-content">"3Skill completely changed my career trajectory. After completing the Web
+          Development Bootcamp, I landed my first developer job with a 40% salary increase. The projects I built during
+          the course were instrumental in my job interviews."</p>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+          </div>
+          <div class="author-info">
+            <h4>Sarah Johnson</h4>
+            <p>Frontend Developer at TechCorp</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-content">"The Data Science course was comprehensive and well-structured. The instructors
+          were always available to answer questions, and the community support was incredible. I went from knowing
+          nothing about Python to building predictive models in just 4 months!"</p>
+        <div class="testimonial-author">
+          <div class="author-img">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+          </div>
+          <div class="author-info">
+            <h4>Michael Chen</h4>
+            <p>Data Analyst at DataInsights</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>3Skill</h3>
+        <p>Empowering individuals with in-demand skills to thrive in the modern workforce through high-quality,
+          accessible education.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">All Courses</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Popular Courses</h3>
+        <ul class="footer-links">
+          <li><a href="#">Web Development Bootcamp</a></li>
+          <li><a href="#">Data Science Mastery</a></li>
+          <li><a href="#">UI/UX Design Fundamentals</a></li>
+          <li><a href="#">Digital Marketing Strategy</a></li>
+          <li><a href="#">Python Programming</a></li>
+          <li><a href="#">Cloud Computing Essentials</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Learning City</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> info@3skill.com</p>
+        <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2023 3Skill. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('navMenu');
+
+    menuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Course Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+
+        // Add active class to clicked button
+        btn.classList.add('active');
+
+        // In a real implementation, you would filter courses here
+        // This is just a visual demonstration
+      });
+    });
+
+    // Course Card Animation on Scroll
+    const courseCards = document.querySelectorAll('.course-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    courseCards.forEach(card => {
+      card.style.opacity = 0;
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(card);
+    });
+  </script>
+</body>
+
+</html>
