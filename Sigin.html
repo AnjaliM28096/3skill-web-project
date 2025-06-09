@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In to 3Skill</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="3skill.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+      --primary: #3498db;
+      --primary-dark: #2980b9;
+      --secondary: #2c3e50;
+      --light: #ecf0f1;
+      --accent: #e74c3c;
+      --success: #27ae60;
+      --gray: #6a737c;
+      --light-gray: #f7f9fa;
+      --border: #dee2e6;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+      background-color: var(--border);
+      color: var(--secondary);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Main Content */
+    .main-container {
+
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 450px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 40px;
+      margin: 2rem 0;
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .login-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--secondary);
+    }
+
+    .login-header p {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
+    /* Social Login Buttons */
+    .social-login {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--secondary);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .social-btn:hover {
+      background: var(--light-gray);
+    }
+
+    .social-btn i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .google-btn i {
+      color: #DB4437;
+    }
+
+    .facebook-btn i {
+      color: #4267B2;
+    }
+
+    .apple-btn i {
+      color: #000;
+    }
+
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .divider-text {
+      padding: 0 15px;
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+
+    .password-field {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--gray);
+      cursor: pointer;
+    }
+
+    .forgot-link {
+      display: block;
+      text-align: right;
+      margin-top: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .forgot-link:hover {
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .login-btn:hover {
+      background-color: var(--primary-dark);
+    }
+
+    /* Signup Prompt */
+    .signup-prompt {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--gray);
+    }
+
+    .signup-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+
+    .signup-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 576px) {
+      .login-container {
+        padding: 30px 20px;
+      }
+
+      .header-container {
+        padding: 1rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+      }
+
+      .nav-link {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="website logo">
+        <!-- <i class="fas fa-graduation-cap"></i> -->
+        <!-- <span>3Skill</span> -->
+      </div>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#" class="nav-btn">Sign In</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="menuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <div class="login-container">
+      <div class="login-header">
+        <h1>Sign in</h1>
+        <p>Continue your learning journey</p>
+      </div>
+
+      <div class="social-login">
+        <button class="social-btn google-btn">
+          <i class="fab fa-google"></i>
+          Continue with Google
+        </button>
+        <button class="social-btn facebook-btn">
+          <i class="fab fa-facebook-f"></i>
+          Continue with Facebook
+        </button>
+        <button class="social-btn apple-btn">
+          <i class="fab fa-apple"></i>
+          Continue with Apple
+        </button>
+      </div>
+
+      <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-text">or</div>
+        <div class="divider-line"></div>
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Password</label>
+          <div class="password-field">
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+            <button type="button" class="toggle-password" id="togglePassword">
+              <i class="far fa-eye"></i>
+            </button>
+          </div>
+          <a href="#" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Sign In</button>
+      </form>
+
+      <div class="signup-prompt">
+        Don't have an account? <a href="signUp.html" class="signup-link">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>3Skill</h3>
+        <p>Empowering individuals with in-demand skills to thrive in the modern workforce through high-quality,
+          accessible education.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">All Courses</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Popular Courses</h3>
+        <ul class="footer-links">
+          <li><a href="#">Web Development Bootcamp</a></li>
+          <li><a href="#">Data Science Mastery</a></li>
+          <li><a href="#">UI/UX Design Fundamentals</a></li>
+          <li><a href="#">Digital Marketing Strategy</a></li>
+          <li><a href="#">Python Programming</a></li>
+          <li><a href="#">Cloud Computing Essentials</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Education Street, Learning City</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fas fa-envelope"></i> info@3skill.com</p>
+        <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2023 3Skill. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="3skill.js">
+
+  </script>
+</body>
+
+</html>
