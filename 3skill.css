@@ -16,7 +16,7 @@
 }
 
 body {
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #333;
   line-height: 1.6;
 }
@@ -97,10 +97,29 @@ nav ul li a:hover {
   font-size: 1.5rem;
   cursor: pointer;
 }
+/* Responsive Design */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+
+  .header-container {
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    margin-left: 10px;
+    font-size: 0.9rem;
+  }
+}
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)),
+  background: linear-gradient(#59738dd9, rgba(85, 109, 134, 0.9)),
     url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80");
   background-size: cover;
   background-position: center;
